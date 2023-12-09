@@ -18,13 +18,19 @@ A sequence of ‘Yes’ or ‘No’ on the output file.
 
 **Sample Input**
 3
+
 ([])
+
 (([()])))
+
 ([()[]()])()
 
 **Sample Output**
+
 Yes
+
 No
+
 Yes
 
 ### Files
