@@ -47,14 +47,13 @@ The parity of 10101 is 3 (mod 2).
 | :---: | -------------------------- | ---------------------------------------------------------- |
 |   1   | [main.cpp](./main.cpp)     | solution file.                                             |
 |   2   | [in](./in)           | Test input file from problem statement                     |
-|   2   | [in2](./in2)           | Test input file from problem statement                     |
-|   3   | [10931.pdf](./10931.pdf)         | Problem document                            |
-|   4   |    |  |
-|   5   |  |                |
+|   3   | [in2](./in2)           | Test input file from problem statement                     |
+|   4   | [10931.pdf](./10931.pdf)         | Problem document                            |
+
 
 ### Instructions
 
-- This project was run using Python 3.5.1
+- This project was run using C++ 11
 
 ### Solution Description
 
