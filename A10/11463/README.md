@@ -79,9 +79,11 @@ Case 2: 1
 
 ### Solution Description
 
-My approach to solving this problem involves using the Floyd-Warshall algorithm to find the shortest paths between all pairs of buildings in each enemy headquarters scenario. The input is processed for each test case, constructing an adjacency matrix to represent the connectivity between buildings through roads. The matrix is initialized with large values (INF) for unconnected buildings, and diagonal elements are set to 0. The Floyd-Warshall algorithm is then applied to iteratively update the matrix, considering all possible paths. Once the shortest paths are computed, the minimum time for the commandos to complete their mission is determined by finding the maximum time taken among all possible routes from the starting building to the meeting point. This maximum time reflects the bottleneck in the commandos' movements, ensuring that all commandos gather at the common meeting place. The result is printed in the specified output format for each test case.
+My approach to solving this problem involves using the Floyd-Warshall algorithm to find the shortest paths between all pairs of buildings in each enemy headquarters scenario. The input is processed for each test case, constructing an adjacency matrix to represent the connectivity between buildings through roads.
 
+The matrix is initialized with large values (INF) for unconnected buildings, and diagonal elements are set to 0. The Floyd-Warshall algorithm is then applied to iteratively update the matrix, considering all possible paths. Once the shortest paths are computed, the minimum time for the commandos to complete their mission is determined by finding the maximum time taken among all possible routes from the starting building to the meeting point. 
 
+This maximum time reflects the bottleneck in the commandos' movements, ensuring that all commandos gather at the common meeting place. The result is printed in the specified output format for each test case.
 
 
 **Sources**
