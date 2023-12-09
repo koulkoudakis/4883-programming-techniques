@@ -164,7 +164,7 @@ Yellow Birch 3.4483
 My approach uses a defaultdict to keep track of the frequency of each species and calculates the total number
 of trees. By iterating through the data, the script sums the occurence of each tree species, and then after calculates and prints the percentage of each tree species in alphabetical order for each test case. The defaultdict is useful for handling the first occurrence of a tree species when looping through the data and adding new keys.
 
-The script repeats this process for all test cases, ensuring to print a blank line between
+The script repeats this process for all test cases and makes sure to print a blank line between
 consecutive cases as specified in the problem statement. 
 
 
