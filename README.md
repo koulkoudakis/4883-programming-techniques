@@ -9,7 +9,7 @@
 
 ### Assignments
 
-|   #   | File                       | Description                                                |
+|   #   | Folder                      | Description                                                |
 | :---: | -------------------------- | ---------------------------------------------------------- |
 |   4   | [A04](./A04)     | Easy Breezy Problems                                           |
 |   5   | [A05](./A05/161)           | Traffic Lights                   |
