@@ -1,4 +1,4 @@
-## 161- Traffic Lights (time limit exceeded)
+## 161- Traffic Lights (doesn't work - time limit exceeded)
 ### Sharome Burton
 ### Description:
 
