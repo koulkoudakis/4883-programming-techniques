@@ -1,3 +1,7 @@
+## 572- Oil Deposits
+### Sharome Burton
+### Description:
+
 The GeoSurvComp geologic survey company is responsible for detecting underground oil deposits.
 GeoSurvComp works with one large rectangular region of land at a time, and creates a grid that divides
 the land into numerous square plots. It then analyzes each plot separately, using sensing equipment to
