@@ -1,4 +1,4 @@
-## 673 - Hectic Pyranomax Syndicated Hexogram
+## 673 - Balancing Parentheses
 ### Sharome Burton
 ### Description:
 
@@ -34,8 +34,7 @@ Yes
 |   1   | [main.py](./main.py)     | solution file.                                             |
 |   2   | [in](./in)           | Test input file from problem statement                     |
 |   3   | [673.pdf](./673.pdf)         | Problem document                            |
-|   4   |    |  |
-|   5   |  |                |
+
 
 ### Instructions
 
