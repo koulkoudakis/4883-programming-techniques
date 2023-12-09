@@ -21,7 +21,7 @@ represented by each species.
 
 **Input**
 
-The rst line is the number of test cases, followed by a blank line.
+The 1st line is the number of test cases, followed by a blank line.
 Each test case of your program consists of a list of the species of every tree observed by the satellite;
 one tree per line. No species name exceeds 30 characters. There are no more than 10,000 species and
 no more than 1,000,000 trees.
