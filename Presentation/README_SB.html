@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>README_SB</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="autopilot-simulation-challenge-readme---sharome-burton">Autopilot Simulation Challenge README - Sharome Burton</h1>
+<p>My objective is to construct a search algorithm to find the minimum time path through a hypothetical network of Tesla supercharging stations. The final route does not have to fully charge at every visited charger, so long as it never runs out of charge between two chargers.</p>
+<h2 id="my-rough-approach">My rough approach</h2>
+<p>I first considered an approach of computing all distances between each location, then brute forcing the shortest path. With a dataset size of 302 locations, this could be a worthwhile approach but it would not be reasonably scalable as the size of the charger network increases.</p>
+<p>I ultimately decided to use an A* algorithm, using the minimum possible time required to travel from the starting location to the goal location along a great circle as the heuristic. This minimum time considers the time needed to drive along that range + the minimum time needed to spend at chargers to have just enough range for the entire journey.</p>
+<p>My approach aims for the car to reach to the goal with near zero range remaining and have near zero range remaining when it stops at a supercharger to charge. The minimum amount of range the car should ever have (measured in hours of charging at 800km/h) is represented by <strong>double safetyFactor</strong>. The car will charge just enough to get enough range to reach the next supercharger along the route.</p>
+<p>The function <em>distToTime()</em> converts this great circle distance to an optimal journey time in hours.Only locations  within 320km geodesic range are of the current node are considered as candidates to be visited.</p>
+<p>As each node is visited, a pointer to the previous node (if that step is seen as a more optimal one than another way of getting to that node) is saved within the data structure representing each location (<strong>struct Location</strong>).</p>
+<p>This method should always return a valid path to the goal, if it exists, within reasonable time.</p>
+<p>The drawback of this approach is that it may not always return the perfectly optimal path.</p>
+<h2 id="how-to-run">How to run</h2>
+<p>I provide the solution in <strong>main.cpp</strong>.</p>
+<p>This submission compiles under gcc with optimization level 1, for example:</p>
+<pre><code>g++ -std=c++17 -O1 main.cpp -o solution
+</code></pre>
+<p>This submission does not use libraries outside of the C++ Standard Library.</p>
+<p>The charger network data is in the format below with newlines separating each charger:</p>
+<pre><code>name, latitude in degrees, longitude in degrees
+</code></pre>
+<p>The program takes as input three strings:</p>
+<pre><code>./solution [path to list of chargers csv] [start charger name] [end charger name]
+</code></pre>
+<p>The program’s only output is a print to standard out in the format:</p>
+<pre><code>initial charger name, first charger name, charge time in hrs, second charger name, charge time in hrs, …, …, goal charger name
+</code></pre>
+<p>The following assumptions were made:</p>
+<ul>
+<li>The car begins at the start charger with a full charge of 320km</li>
+<li>The superchargers have a charge rate of 800km/hr</li>
+<li>The car travels at a constant speed of 105km/hr along great circle routes between chargers</li>
+<li>The Earth is a sphere of radius 6356.752km</li>
+</ul>
+<h2 id="references">References:</h2>
+<p><strong>GREAT CIRCLE DISTANCE FORMULA</strong></p>
+<p><a href="https://www.geeksforgeeks.org/great-circle-distance-formula/">https://www.geeksforgeeks.org/great-circle-distance-formula/</a></p>
+<p>d = rcos-1[cos a cos b cos(x-y) + sin a sin b]</p>
+<p><strong>GREAT CIRCLE VS GEODESIC DISTANCE</strong></p>
+<p><a href="https://gis.stackexchange.com/questions/308508/difference-between-geodetic-distance-and-great-circle-distance">https://gis.stackexchange.com/questions/308508/difference-between-geodetic-distance-and-great-circle-distance</a></p>
+<p><strong>MEASURING EXECUTION TIME IN C++</strong></p>
+<p><a href="https://www.geeksforgeeks.org/measure-execution-time-with-high-precision-in-c-c/">https://www.geeksforgeeks.org/measure-execution-time-with-high-precision-in-c-c/</a></p>
+<p><strong>A-STAR ALGORITHM</strong></p>
+<p><a href="https://isaaccomputerscience.org/concepts/dsa_search_a_star?examBoard=all&amp;stage=all">https://isaaccomputerscience.org/concepts/dsa_search_a_star?examBoard=all&amp;stage=all</a></p>
+<p><a href="https://en.wikipedia.org/wiki/A*_search_algorithm#Description">https://en.wikipedia.org/wiki/A*_search_algorithm#Description</a></p>
+<p><strong>LAT/LONG TO KM</strong></p>
+<p><a href="https://stackoverflow.com/questions/1253499/simple-calculations-for-working-with-lat-lon-and-km-distance">https://stackoverflow.com/questions/1253499/simple-calculations-for-working-with-lat-lon-and-km-distance</a></p>
+<p><strong>BALLPARK DISTANCE ESTIMATES BETWEEN LOCATIONS</strong></p>
+<p><a href="https://www.google.com/maps/">https://www.google.com/maps/</a></p>
+<p><strong>REVERSING A PRIORITY QUEUE</strong><br>
+<a href="https://stackoverflow.com/questions/15647162/priority-queue-in-reverse-order">https://stackoverflow.com/questions/15647162/priority-queue-in-reverse-order</a></p>
+</div>
+</body>
+
+</html>
