@@ -29,9 +29,13 @@ lines that can connect all the freckles.
 **Sample Input**
 
 1
+
 3
+
 1.0 1.0
+
 2.0 2.0
+
 2.0 4.0
 
 **Sample Output**
