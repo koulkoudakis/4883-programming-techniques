@@ -30,6 +30,7 @@ lines that can connect all the freckles.
 
 1
 
+
 3
 
 1.0 1.0
